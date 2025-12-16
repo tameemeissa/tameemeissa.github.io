@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ورشات تدريبية للتأهيل السيبراني الاحترافي - د. تميم عيسى</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .hero-image {
+            width: 100%;
+            height: 250px;
+            background: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1000&q=80') center/cover;
+            border-radius: 12px 12px 0 0;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 86, 179, 0.7);
+            border-radius: 12px 12px 0 0;
+        }
+        header {
+            position: relative;
+            text-align: center;
+            padding: 20px;
+            color: white;
+            z-index: 1;
+        }
+        header h1 { font-size: 2.3em; margin: 0; }
+        header h2 { font-size: 1.3em; margin-top: 10px; opacity: 0.9; font-weight: normal;}
+        
+        .philosophy-box {
+            background-color: #f0f9ff;
+            padding: 25px;
+            border-radius: 8px;
+            border-right: 6px solid #0056b3;
+            margin-bottom: 30px;
+        }
+
+        h2.section-title {
+            color: #0056b3;
+            border-bottom: 3px solid #28a745;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+
+        .track-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .track-card {
+            border: 1px solid #eee;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            text-align: center;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .track-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+        .track-card img { width: 60px; height: 60px; margin-bottom: 15px; }
+        .track-card h3 { color: #28a745; font-size: 1.2em; margin-bottom: 15px; border-bottom: 1px solid #eee; width: 100%; padding-bottom: 10px;}
+
+        /* Team Visual Section */
+        .team-section {
+            display: flex;
+            gap: 20px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        .team-box { flex: 1; padding: 25px; border-radius: 10px; color: white; }
+        .red-team { background-color: #c0392b; }
+        .blue-team { background-color: #2980b9; }
+        .team-box h4 { margin: 10px 0; font-size: 1.4em; }
+
+        .service-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .service-table th { background-color: #0056b3; color: white; padding: 15px; text-align: right; }
+        .service-table td { padding: 15px; border: 1px solid #ddd; text-align: right; }
+
+        .call-to-action {
+            text-align: center;
+            padding: 40px;
+            background-color: #28a745;
+            color: white;
+            border-radius: 12px;
+            margin-top: 40px;
+        }
+        .call-to-action a {
+            display: inline-block;
+            background-color: white;
+            color: #28a745;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+        .call-to-action a:hover { opacity: 0.9; transform: scale(1.05); }
+
+        .contact-info {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            color: #555;
+            border-top: 1px solid #eee;
+        }
+        .contact-info a { color: #0056b3; text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero-image">
+            <div class="hero-overlay"></div>
+            <header>
+                <h1>ورشات تدريبية للتأهيل السيبراني الاحترافي</h1>
+                <h2>د. تميم عيسى - خبير ومستشار الأمن السيبراني</h2>
+            </header>
+        </div>
+
+        <div class="philosophy-box">
+            <h3>🛡️ فلسفتي التعليمية: من العلم الأكاديمي إلى الممارسة الاحترافية</h3>
+            <p>أنا لا أقدم مجرد دروس نظرية، بل أعمل على بناء منظومة دفاعية بشرية داخل مؤسستك. برنامجي مصمم لتمكين الكوادر من خلال:</p>
+            <ul>
+                <li><strong>تدريبات عملية:</strong> التركيز على محاكاة الواقع المهني بعيداً عن السرد النظري.</li>
+                <li><strong>أطر عالمية:</strong> الاعتماد على معايير (NIST) و (ISO 27001) لضمان جودة الأداء عالمياً.</li>
+                <li><strong>جاهزية تشغيلية:</strong> إعداد الكوادر لشغل مناصب حيوية مثل محللي أمن ومهندسي دفاع ومستشاري مخاطر.</li>
+            </ul>
+        </div>
+
+        <h2 class="section-title">🚀 الورشات التدريبية المتاحة</h2>
+        <div class="track-grid">
+            <div class="track-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/2092/2092663.png" alt="Icon">
+                <h3>I. مقدمة إلى الأمن السيبراني</h3>
+                <p>بناء إتقان راسخ في أنظمة التشغيل (Linux/Windows) والشبكات ومنهجيات الهجوم/الدفاع الأساسية، وهو أساس إلزامي لدخول جميع المسارات المتخصصة.</p>
+            </div>
+            
+            <div class="track-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Icon">
+                <h3>IV. الحوكمة والامتثال (GRC)</h3>
+                <p>تأهيل الموظفين لإدارة المخاطر المؤسساتية وضمان مطابقة معايير الآيزو (ISO) وتحويل المتطلبات القانونية إلى سياسات ناجحة.</p>
+            </div>
+
+            <div class="track-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/2438/2438078.png" alt="Icon">
+                <h3>V. هندسة الأمن الاستباقي</h3>
+                <p>كيفية بناء وتصميم بنية تحتية منيعة، وتأمين الأنظمة السحابية والحديثة لضمان استمرارية الأعمال تحت أي ظرف.</p>
+            </div>
+        </div>
+
+        <div class="team-section">
+            <div class="team-box red-team">
+                <img src="https://cdn-icons-png.flaticon.com/512/9440/9440835.png" style="width: 50px; filter: brightness(0) invert(1);" alt="Red Team">
+                <h4>II. الفريق الأحمر</h4>
+                <p><strong>اختبار القدرة الدفاعية (الهجومي):</strong> تعلم كيفية تفكير المهاجمين لاكتشاف الثغرات في الأنظمة قبل استغلالها من قبل أطراف خارجية.</p>
+            </div>
+            <div class="team-box blue-team">
+                <img src="https://cdn-icons-png.flaticon.com/512/3557/3557620.png" style="width: 50px; filter: brightness(0) invert(1);" alt="Blue Team">
+                <h4>III. الفريق الأزرق</h4>
+                <p><strong>الدفاع والعمليات السيبرانية:</strong> التركيز على مراقبة الأنظمة، وتحليل التنبيهات، والاستجابة السريعة والفعالة للحوادث الأمنية المفاجئة.</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">💎 لماذا تختار هذه الورشات لتدريب موظفيك؟</h2>
+        <table class="service-table">
+            <thead>
+                <tr>
+                    <th>الميزة المؤسساتية</th>
+                    <th>القيمة المضافة لجهتكم</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>تعلم قائم على التحدي</strong></td>
+                    <td>المتدرب يواجه مشكلات حقيقية ويقوم بحلها، مما يرسخ المهارة بشكل دائم.</td>
+                </tr>
+                <tr>
+                    <td><strong>امتثال للمعايير الدولية</strong></td>
+                    <td>يتم إعداد الكوادر بناءً على معايير NIST و ISO، مما يرفع من تصنيف مؤسستكم الأمني.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="call-to-action">
+            <h2>ابدأ بتطوير فريقك الآن</h2>
+            <p>أقوم بتصميم وتخصيص الورشات بما يتناسب مع احتياجات مؤسستكم الفنية والإدارية.</p>
+            <a href="https://wa.me/963939433817" target="_blank">طلب مناقشة الخطة التدريبية لمؤسستك</a>
+        </div>
+
+        <div class="contact-info">
+            للتواصل المباشر مع د. تميم عيسى: <br>
+            📞 هاتف: <a href="tel:+00963939433817">00963939433817</a> | 
+            💬 واتساب: <a href="https://wa.me/963939433817" target="_blank">بدء محادثة</a> |
+            📧 بريد: <a href="mailto:dr.tameem.eissa.sy@gmail.com">dr.tameem.eissa.sy@gmail.com</a>
+        </div>
+    </div>
+</body>
+</html>
