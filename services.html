@@ -6,62 +6,62 @@
     <title>خدمات استشارية - د. تميم عيسى</title>
     <style>
         :root {
-            --primary: #0056b3;
+            --primary: #004a99;
             --secondary: #28a745;
-            --dark: #1a202c;
-            --light-bg: #f8fafc;
+            --dark-navy: #0a192f;
+            --slate: #64748b;
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--light-bg);
+            background-color: #f8fafc;
             color: #333;
             line-height: 1.6;
             margin: 0;
-            padding: 0;
         }
         .container {
             max-width: 1100px;
             margin: 40px auto;
             padding: 20px;
         }
-        /* Header & Hero */
+        /* Header Hero */
         header {
             text-align: center;
-            background: linear-gradient(135deg, #004a99 0%, #002d5d 100%);
+            background: var(--dark-navy);
             color: white;
             padding: 60px 20px;
             border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
             margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
         }
-        header h1 { font-size: 2.6em; margin: 0; }
-        header p { font-size: 1.2em; opacity: 0.9; margin-top: 15px; }
+        header h1 { font-size: 2.5em; margin: 0; color: #64ffda; }
+        header p { font-size: 1.2em; opacity: 0.8; margin-top: 15px; }
 
-        /* Profile Section */
-        .vciso-card {
+        /* vCISO Box */
+        .vciso-section {
             background: white;
             border-radius: 15px;
             display: flex;
             align-items: center;
             padding: 30px;
             gap: 25px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
             margin-bottom: 50px;
-            border-right: 8px solid var(--secondary);
+            border-right: 8px solid var(--primary);
         }
-        .vciso-icon { width: 80px; height: 80px; }
+        .vciso-icon { width: 70px; height: 70px; opacity: 0.9; }
 
-        /* Section Titles */
+        /* Section Title Styling */
         .section-header {
             display: flex;
             align-items: center;
             gap: 15px;
-            margin: 40px 0 25px;
-            color: var(--primary);
+            margin: 50px 0 30px;
         }
-        .section-header hr { flex: 1; border: 0; border-top: 2px solid #e2e8f0; }
+        .section-header h2 { color: var(--dark-navy); font-size: 1.8em; white-space: nowrap; }
+        .section-header hr { flex: 1; border: 0; border-top: 2px solid #cbd5e1; }
 
-        /* Services Grid */
+        /* Service Cards Grid */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -69,47 +69,44 @@
         }
         .service-card {
             background: white;
-            border-radius: 15px;
+            border-radius: 12px;
             padding: 25px;
             transition: 0.3s;
-            border: 1px solid #edf2f7;
-            position: relative;
-            overflow: hidden;
-        }
-        .service-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
-        
-        .service-card-header {
+            border: 1px solid #e2e8f0;
             display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 15px;
+            flex-direction: column;
         }
-        .service-icon { width: 50px; height: 50px; }
-        .service-card h4 { margin: 0; color: var(--primary); font-size: 1.2em; }
+        .service-card:hover { transform: translateY(-8px); box-shadow: 0 12px 25px rgba(0,0,0,0.08); border-color: var(--primary); }
         
-        .value-badge {
-            background: #eef2ff;
-            color: #4338ca;
-            padding: 5px 12px;
-            border-radius: 20px;
+        .card-top { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
+        .card-icon { width: 45px; height: 45px; }
+        .service-card h4 { margin: 0; color: var(--primary); font-size: 1.25em; }
+        
+        .badge {
+            background: #f1f5f9;
+            color: var(--primary);
+            padding: 4px 12px;
+            border-radius: 6px;
             font-size: 0.85em;
-            display: inline-block;
-            margin-bottom: 10px;
             font-weight: bold;
-        }
-        .deliverable-box {
-            margin-top: 15px;
-            padding: 12px;
-            background: #f0fff4;
-            border-radius: 8px;
-            border-right: 3px solid var(--secondary);
-            font-size: 0.9em;
+            margin-bottom: 12px;
+            display: inline-block;
         }
 
-        /* Call to Action */
-        .cta-box {
+        .deliverable {
+            margin-top: auto;
+            padding: 12px;
+            background: #f0fdf4;
+            border-radius: 8px;
+            font-size: 0.9em;
+            color: #166534;
+            border: 1px dashed #bbf7d0;
+        }
+
+        /* CTA Section */
+        .cta {
             text-align: center;
-            background: var(--dark);
+            background: var(--dark-navy);
             color: white;
             padding: 50px;
             border-radius: 20px;
@@ -119,18 +116,18 @@
             display: inline-block;
             background: var(--secondary);
             color: white;
-            padding: 18px 45px;
+            padding: 16px 40px;
             text-decoration: none;
-            border-radius: 50px;
-            font-size: 1.3em;
+            border-radius: 8px;
+            font-size: 1.2em;
             font-weight: bold;
             margin-top: 25px;
             transition: 0.3s;
         }
-        .cta-btn:hover { background: #218838; transform: scale(1.05); }
+        .cta-btn:hover { background: #1f8a38; box-shadow: 0 0 20px rgba(40, 167, 69, 0.4); }
 
         @media (max-width: 768px) {
-            .vciso-card { flex-direction: column; text-align: center; }
+            .vciso-section { flex-direction: column; text-align: center; }
         }
     </style>
 </head>
@@ -139,98 +136,98 @@
 <div class="container">
     <header>
         <h1>الأمن السيبراني الاستشاري</h1>
-        <p>الوضوح، التنظيم، والامتثال مع د. تميم عيسى</p>
+        <p>وضوح تقني، تنظيم مؤسساتي، وامتثال للمعايير الدولية</p>
     </header>
 
-    <div class="vciso-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/1067/1067357.png" class="vciso-icon" alt="Consultant">
+    <div class="vciso-section">
+        <img src="https://cdn-icons-png.flaticon.com/512/2716/2716654.png" class="vciso-icon" alt="vCISO">
         <div>
-            <h3 style="margin:0; color: #856404;">شريكك الاستراتيجي في الأمن (vCISO)</h3>
-            <p>خلاصة خبرات ماليزيا، كوريا الجنوبية، وألمانيا بين يديك لضمان أمان مؤسستك بمنهجية استباقية عالمية.</p>
+            <h3 style="margin:0; color: var(--primary);">المستشار الأمني الافتراضي (vCISO)</h3>
+            <p>حلول سيبرانية استراتيجية مبنية على خبرات دولية لتوجيه دفة الأمان في مؤسستك بذكاء وكفاءة.</p>
         </div>
     </div>
 
     <div class="section-header">
-        <h2 style="margin:0">I. التدقيق الفني الاستباقي</h2>
+        <h2>I. التدقيق الفني الاستباقي</h2>
         <hr>
     </div>
 
     <div class="services-grid">
         <div class="service-card">
-            <div class="service-card-header">
-                <img src="https://cdn-icons-png.flaticon.com/512/2645/2645850.png" class="service-icon">
+            <div class="card-top">
+                <img src="https://cdn-icons-png.flaticon.com/512/2438/2438078.png" class="card-icon" alt="Audit">
                 <h4>تدقيق المخاطر الرقمية</h4>
             </div>
-            <span class="value-badge">خريطة طريق واضحة</span>
-            <p>تحديد شامل لكافة نقاط الضعف والمخاطر في الأنظمة الحالية.</p>
-            <div class="deliverable-box">📦 <b>المنتج:</b> تقرير تقييم شامل مع خطوات تصحيح تنفيذية.</div>
+            <span class="badge">الاستكشاف المبكر</span>
+            <p>تحليل شامل للثغرات الأمنية في البنية التحتية قبل أن تُستغل.</p>
+            <div class="deliverable">📄 <b>المخرج:</b> تقرير مصفوفة المخاطر مع خطة المعالجة.</div>
         </div>
 
         <div class="service-card">
-            <div class="service-card-header">
-                <img src="https://cdn-icons-png.flaticon.com/512/1265/1265907.png" class="service-icon">
+            <div class="card-top">
+                <img src="https://cdn-icons-png.flaticon.com/512/3252/3252030.png" class="card-icon" alt="Network">
                 <h4>تقييم تصميم الشبكة</h4>
             </div>
-            <span class="value-badge">هيكلية صلبة</span>
-            <p>مراجعة الجدران النارية والمسارات لضمان عدم وجود ثغرات هيكلية.</p>
-            <div class="deliverable-box">📦 <b>المنتج:</b> مخطط شبكة مُدقَّق مع قائمة توصيات فنية.</div>
+            <span class="badge">تحصين الهيكلية</span>
+            <p>مراجعة الجدران النارية وعزل الشبكات (Segmentation) لضمان بيئة آمنة.</p>
+            <div class="deliverable">📄 <b>المخرج:</b> مخطط الشبكة الآمن والتوصيات الهندسية.</div>
         </div>
 
         <div class="service-card">
-            <div class="service-card-header">
-                <img src="https://cdn-icons-png.flaticon.com/512/2875/2875438.png" class="service-icon">
+            <div class="card-top">
+                <img src="https://cdn-icons-png.flaticon.com/512/2092/2092663.png" class="card-icon" alt="Email">
                 <h4>أمان البريد والدومين</h4>
             </div>
-            <span class="value-badge">حماية الهوية</span>
-            <p>تأمين النطاقات لمنع انتحال الشخصية وهجمات التصيد الاحتيالي.</p>
-            <div class="deliverable-box">📦 <b>المنتج:</b> تقرير تحليل DNS وتفعيل بروتوكولات SPF/DMARC.</div>
+            <span class="badge">مكافحة الانتحال</span>
+            <p>حماية سمعة المؤسسة عبر ضبط بروتوكولات حماية النطاقات والبريد.</p>
+            <div class="deliverable">📄 <b>المخرج:</b> تقرير الامتثال لبروتوكولات DMARC/SPF.</div>
         </div>
     </div>
 
     <div class="section-header">
-        <h2 style="margin:0">II. الحوكمة والامتثال (GRC)</h2>
+        <h2>II. الحوكمة والامتثال (GRC)</h2>
         <hr>
     </div>
 
     <div class="services-grid">
         <div class="service-card">
-            <div class="service-card-header">
-                <img src="https://cdn-icons-png.flaticon.com/512/2541/2541991.png" class="service-icon">
+            <div class="card-top">
+                <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" class="card-icon" alt="ISO">
                 <h4>جاهزية ISO 27001</h4>
             </div>
-            <span class="value-badge">امتثال عالمي</span>
-            <p>تحليل الفجوات بين وضعك الحالي والمتطلبات العالمية للحصول على الشهادة.</p>
-            <div class="deliverable-box">📦 <b>المنتج:</b> تقرير Gap Analysis مع خطة عمل زمنية.</div>
+            <span class="badge">المعايير الدولية</span>
+            <p>إعداد المؤسسة للحصول على شهادات الجودة في أمن المعلومات.</p>
+            <div class="deliverable">📄 <b>المخرج:</b> تقرير تحليل الفجوات (Gap Analysis).</div>
         </div>
 
         <div class="service-card">
-            <div class="service-card-header">
-                <img src="https://cdn-icons-png.flaticon.com/512/3503/3503613.png" class="service-icon">
+            <div class="card-top">
+                <img src="https://cdn-icons-png.flaticon.com/512/9906/9906161.png" class="card-icon" alt="Continuity">
                 <h4>استمرارية الأعمال (DRP)</h4>
             </div>
-            <span class="value-badge">ضمان العمل</span>
-            <p>وضع خطط تقنية لضمان استعادة البيانات فوراً بعد أي طارئ.</p>
-            <div class="deliverable-box">📦 <b>المنتج:</b> وثيقة خطة التعافي من الكوارث مُدقَّقة.</div>
+            <span class="badge">الصمود الرقمي</span>
+            <p>ضمان بقاء العمليات حية واستعادة البيانات بعد الكوارث السيبرانية.</p>
+            <div class="deliverable">📄 <b>المخرج:</b> وثيقة خطة التعافي من الكوارث.</div>
         </div>
 
         <div class="service-card">
-            <div class="service-card-header">
-                <img src="https://cdn-icons-png.flaticon.com/512/3067/3067451.png" class="service-icon">
+            <div class="card-top">
+                <img src="https://cdn-icons-png.flaticon.com/512/3067/3067451.png" class="card-icon" alt="Access">
                 <h4>إدارة الوصول والصلاحيات</h4>
             </div>
-            <span class="value-badge">تحكم مطلق</span>
-            <p>تنظيم حسابات المستخدمين وتقليل مخاطر الدخول غير المصرح به.</p>
-            <div class="deliverable-box">📦 <b>المنتج:</b> مصفوفة وصول (Access Matrix) كاملة.</div>
+            <span class="badge">الهوية والأمان</span>
+            <p>ضبط صلاحيات الموظفين والوصول إلى البيانات الحساسة بدقة.</p>
+            <div class="deliverable">📄 <b>المخرج:</b> مصفوفة صلاحيات (IAM) مُحدثة.</div>
         </div>
     </div>
 
-    <div class="cta-box">
-        <h2>نبدأ برؤية واضحة لمستقبل أمانك</h2>
-        <p>تواصل معي اليوم للحصول على جلسة استشارية أولية لمناقشة احتياجات مؤسستك</p>
-        <a href="https://wa.me/963939433817" class="cta-btn">طلب استشارة أوليّة مجانية</a>
-        <div style="margin-top: 20px; opacity: 0.8;">
+    <div class="cta">
+        <h2 style="color: #64ffda;">هل مؤسستك محمية بما يكفي؟</h2>
+        <p>دعنا نناقش كيف يمكن لخبراتي الدولية أن تساعد في تأمين أصولك الرقمية.</p>
+        <a href="https://wa.me/963939433817" class="cta-btn">اطلب استشارة أوليّة مجانية</a>
+        <p style="margin-top: 20px; font-size: 0.9em; opacity: 0.7;">
             📞 00963939433817 | 📧 dr.tameem.eissa.sy@gmail.com
-        </div>
+        </p>
     </div>
 </div>
 
