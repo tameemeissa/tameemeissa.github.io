@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>د. تميم عيسى | خبير ومستشار الأمن السيبراني</title>
+    <title>د. تميم عيسى | بوابة الأمن السيبراني</title>
     <style>
         :root {
             --primary-navy: #0a192f;
@@ -20,53 +20,24 @@
             line-height: 1.6;
         }
 
-        .hero {
+        .main-wrapper {
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
-            text-align: center;
-            padding: 60px 20px;
+            padding: 40px 20px;
             background: radial-gradient(circle at center, #112240 0%, #0a192f 100%);
         }
 
-        .profile-photo {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            border: 4px solid var(--accent-cyan);
-            margin-bottom: 25px;
-            object-fit: cover;
-            box-shadow: 0 0 20px rgba(100, 255, 218, 0.3);
-        }
-
-        .hero h2 {
-            font-size: 1.4rem;
-            color: var(--accent-cyan);
-            font-weight: 400;
-            margin-bottom: 10px;
-        }
-
-        .hero h1 {
-            font-size: 3.2rem;
-            margin-bottom: 20px;
-            color: var(--white);
-        }
-
-        .intro-text {
-            max-width: 850px;
-            font-size: 1.1rem;
-            color: var(--text-slate);
-            margin-bottom: 40px;
-        }
-
+        /* جعل الروابط في البداية */
         .portal-container {
             display: flex;
             gap: 25px;
             flex-wrap: wrap;
             justify-content: center;
-            margin-bottom: 50px;
+            margin-top: 20px;
+            margin-bottom: 60px;
+            width: 100%;
         }
 
         .portal-card {
@@ -96,6 +67,62 @@
         .portal-card h3 {
             color: var(--accent-cyan);
             margin-bottom: 15px;
+            font-size: 1.6rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 25px;
+            border: 1px solid var(--accent-cyan);
+            border-radius: 4px;
+            color: var(--accent-cyan);
+            text-decoration: none;
+            font-size: 1rem;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        /* قسم التعريف والصورة في الأسفل */
+        .profile-section {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            max-width: 900px;
+            padding: 40px;
+            background: rgba(17, 34, 64, 0.5);
+            border-radius: 20px;
+            border: 1px solid #233554;
+            margin-top: 20px;
+        }
+
+        .profile-photo {
+            width: 160px;
+            height: 160px;
+            border-radius: 20px; /* شكل مربع بزوايا منحنية يعطي طابعاً حديثاً */
+            border: 3px solid var(--accent-cyan);
+            object-fit: cover;
+        }
+
+        .profile-info {
+            text-align: right;
+        }
+
+        .profile-info h2 {
+            margin: 0;
+            color: var(--white);
+            font-size: 2rem;
+        }
+
+        .profile-info h4 {
+            margin: 5px 0 15px 0;
+            color: var(--accent-cyan);
+            font-weight: 400;
+        }
+
+        .intro-text {
+            color: var(--text-slate);
+            font-size: 1.05rem;
+            max-width: 600px;
         }
 
         .contact-bar {
@@ -107,7 +134,7 @@
             gap: 25px;
             flex-wrap: wrap;
             justify-content: center;
-            margin-top: 20px;
+            margin-top: 40px;
         }
 
         .contact-item {
@@ -120,46 +147,26 @@
             transition: 0.3s;
         }
 
-        .contact-item:hover {
-            color: var(--accent-cyan);
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            border: 1px solid var(--accent-cyan);
-            border-radius: 4px;
-            color: var(--accent-cyan);
-            text-decoration: none;
-            font-size: 0.9rem;
-            margin-top: 15px;
-        }
+        .contact-item:hover { color: var(--accent-cyan); }
 
         footer {
-            padding: 40px;
+            padding: 30px;
             text-align: center;
             color: var(--text-slate);
-            border-top: 1px solid #233554;
+            font-size: 0.85rem;
         }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
-            .contact-bar { border-radius: 15px; padding: 20px; }
+            .profile-section { flex-direction: column; text-align: center; }
+            .profile-info { text-align: center; }
+            .contact-bar { border-radius: 15px; }
         }
     </style>
 </head>
 <body>
 
-    <section class="hero">
-        <img src="https://tameemeissa.github.io/personal%20photo.jpg" alt="د. تميم عيسى" class="profile-photo">
+    <div class="main-wrapper">
         
-        <h2>دكتور تميم عيسى</h2>
-        <h1>خبير ومستشار الأمن السيبراني</h1>
-        
-        <div class="intro-text">
-            خبير يحمل درجة الدكتوراه في أمن الشبكات اللاسلكية، بخلفية دولية ممتدة عبر ألمانيا وكوريا الجنوبية وماليزيا. متخصص في هندسة الحوكمة والامتثال (GRC)، اختبار الاختراق، وحماية البنية التحتية السحابية.
-        </div>
-
         <div class="portal-container">
             <a href="https://tameemeissa.github.io/services.html" class="portal-card">
                 <img src="https://cdn-icons-png.flaticon.com/512/2716/2716654.png" alt="Services" class="icon">
@@ -176,6 +183,17 @@
             </a>
         </div>
 
+        <div class="profile-section">
+            <img src="https://tameemeissa.github.io/personal%20photo.jpg" alt="د. تميم عيسى" class="profile-photo">
+            <div class="profile-info">
+                <h2>دكتور تميم عيسى</h2>
+                <h4>خبير ومستشار الأمن السيبراني</h4>
+                <div class="intro-text">
+                    خبير يحمل درجة الدكتوراه في أمن الشبكات اللاسلكية، بخلفية دولية ممتدة عبر ألمانيا وكوريا الجنوبية وماليزيا. متخصص في هندسة الحوكمة والامتثال (GRC)، اختبار الاختراق، وحماية البنية التحتية السحابية.
+                </div>
+            </div>
+        </div>
+
         <div class="contact-bar">
             <a href="https://www.linkedin.com/in/tameem-eissa-a854b030/" class="contact-item" target="_blank">
                 🔗 <span>LinkedIn</span>
@@ -190,7 +208,8 @@
                 📧 <span>dr.tameem.eissa.sy@gmail.com</span>
             </a>
         </div>
-    </section>
+
+    </div>
 
     <footer>
         <p>© 2025 د. تميم عيسى - خبير الأمن السيبراني</p>
