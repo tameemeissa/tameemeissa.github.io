@@ -29,7 +29,7 @@
             background: radial-gradient(circle at center, #112240 0%, #0a192f 100%);
         }
 
-        /* القسم الأول: الصورة الشخصية والتعريف (في البداية) */
+        /* القسم الأول: الصورة الشخصية والتعريف */
         .hero-section {
             display: flex;
             flex-direction: column;
@@ -40,9 +40,9 @@
         }
 
         .profile-frame {
-            width: 280px; /* عرض أكبر لإظهار البدلة بشكل أوضح */
+            width: 180px; /* تم تصغير الحجم هنا من 280 إلى 180 */
             height: auto;
-            border: 3px solid var(--accent-cyan);
+            border: 2px solid var(--accent-cyan);
             border-radius: 15px;
             overflow: hidden;
             margin-bottom: 25px;
@@ -54,7 +54,6 @@
             width: 100%;
             height: auto;
             display: block;
-            /* لضمان ظهور كامل الصورة والبدلة */
             object-fit: contain; 
         }
 
@@ -162,7 +161,7 @@
 
         @media (max-width: 768px) {
             .hero-section h1 { font-size: 2.2rem; }
-            .profile-frame { width: 220px; }
+            .profile-frame { width: 150px; }
             .contact-bar { border-radius: 15px; }
         }
     </style>
