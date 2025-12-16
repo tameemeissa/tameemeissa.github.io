@@ -18,6 +18,29 @@
             line-height: 1.6;
             margin: 0;
         }
+
+        /* Navigation Style */
+        .nav-bar {
+            display: flex;
+            justify-content: flex-start;
+            padding: 15px 0;
+            margin-bottom: 20px;
+        }
+        .home-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+            font-size: 1.1em;
+        }
+        .home-link:hover {
+            color: var(--dark-navy);
+            transform: translateX(-5px);
+        }
+
         .container {
             max-width: 1100px;
             margin: 40px auto;
@@ -121,6 +144,11 @@
         }
         .cta-btn:hover { background: #1f8a38; box-shadow: 0 0 20px rgba(40, 167, 69, 0.4); }
 
+        .back-home-footer {
+            text-align: center;
+            margin-top: 30px;
+        }
+
         @media (max-width: 768px) {
             .vciso-section { flex-direction: column; text-align: center; }
         }
@@ -129,6 +157,12 @@
 <body>
 
 <div class="container">
+    <nav class="nav-bar">
+        <a href="https://tameemeissa.github.io/" class="home-link">
+            <span>🏠</span> العودة للرئيسية
+        </a>
+    </nav>
+
     <header>
         <h1>الأمن السيبراني الاستشاري</h1>
         <p>وضوح تقني، تنظيم مؤسساتي، وامتثال للمعايير الدولية</p>
@@ -252,6 +286,12 @@
         <p style="margin-top: 20px; font-size: 0.9em; opacity: 0.7;">
             📞 00963939433817 | 📧 dr.tameem.eissa.sy@gmail.com
         </p>
+    </div>
+
+    <div class="back-home-footer">
+        <a href="https://tameemeissa.github.io/" class="home-link" style="justify-content: center;">
+            <span>🏠</span> العودة إلى الصفحة الرئيسية
+        </a>
     </div>
 </div>
 
