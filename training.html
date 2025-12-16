@@ -13,9 +13,37 @@
             margin: 0;
             padding: 0;
         }
+
+        /* Home Navigation Styles */
+        .top-nav {
+            max-width: 1000px;
+            margin: 15px auto 0;
+            padding: 0 20px;
+            display: flex;
+            justify-content: flex-start;
+        }
+        .home-btn {
+            text-decoration: none;
+            color: #0056b3;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+            background: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .home-btn:hover {
+            background: #0056b3;
+            color: white;
+            transform: translateX(-5px);
+        }
+
         .container {
             max-width: 1000px;
-            margin: 40px auto;
+            margin: 20px auto 40px;
             padding: 20px;
             background-color: #ffffff;
             border-radius: 12px;
@@ -85,7 +113,6 @@
         .track-card img { width: 60px; height: 60px; margin-bottom: 15px; }
         .track-card h3 { color: #28a745; font-size: 1.2em; margin-bottom: 15px; border-bottom: 1px solid #eee; width: 100%; padding-bottom: 10px;}
 
-        /* Team Visual Section */
         .team-section {
             display: flex;
             gap: 20px;
@@ -127,6 +154,12 @@
         }
         .call-to-action a:hover { opacity: 0.9; transform: scale(1.05); }
 
+        .footer-nav {
+            text-align: center;
+            margin-top: 20px;
+            padding-bottom: 20px;
+        }
+
         .contact-info {
             text-align: center;
             margin-top: 30px;
@@ -135,9 +168,20 @@
             border-top: 1px solid #eee;
         }
         .contact-info a { color: #0056b3; text-decoration: none; font-weight: bold; }
+        
+        @media (max-width: 768px) {
+            .team-section { flex-direction: column; }
+        }
     </style>
 </head>
 <body>
+
+    <nav class="top-nav">
+        <a href="https://tameemeissa.github.io/" class="home-btn">
+            🏠 العودة للرئيسية
+        </a>
+    </nav>
+
     <div class="container">
         <div class="hero-image">
             <div class="hero-overlay"></div>
@@ -223,6 +267,12 @@
             💬 واتساب: <a href="https://wa.me/963939433817" target="_blank">بدء محادثة</a> |
             📧 بريد: <a href="mailto:dr.tameem.eissa.sy@gmail.com">dr.tameem.eissa.sy@gmail.com</a>
         </div>
+
+        <div class="footer-nav">
+             <a href="https://tameemeissa.github.io/" class="home-btn" style="display:inline-flex; border: 1px solid #ddd;">
+                🏠 العودة إلى الصفحة الرئيسية
+            </a>
+        </div>
     </div>
 </body>
-</html>
+</html> 
