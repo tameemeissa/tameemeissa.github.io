@@ -33,6 +33,17 @@
             background: radial-gradient(circle at center, #112240 0%, #0a192f 100%);
         }
 
+        /* Profile Photo Styling */
+        .profile-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 4px solid var(--accent-cyan);
+            margin-bottom: 25px;
+            object-fit: cover;
+            box-shadow: 0 0 20px rgba(100, 255, 218, 0.3);
+        }
+
         .hero h2 {
             font-size: 1.4rem;
             color: var(--accent-cyan);
@@ -80,9 +91,9 @@
             box-shadow: 0 10px 30px rgba(2, 12, 27, 0.7);
         }
 
-        .portal-card img {
-            width: 70px;
-            height: 70px;
+        .portal-card img.icon {
+            width: 60px;
+            height: 60px;
             margin-bottom: 20px;
         }
 
@@ -94,7 +105,7 @@
         /* Contact Bar */
         .contact-bar {
             background: rgba(17, 34, 64, 0.8);
-            padding: 20px;
+            padding: 15px 30px;
             border-radius: 50px;
             border: 1px solid #233554;
             display: flex;
@@ -107,19 +118,15 @@
         .contact-item {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             color: var(--white);
             text-decoration: none;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             transition: 0.3s;
         }
 
         .contact-item:hover {
             color: var(--accent-cyan);
-        }
-
-        .contact-item i {
-            font-size: 1.2rem;
         }
 
         .btn {
@@ -142,51 +149,56 @@
 
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.2rem; }
-            .contact-bar { border-radius: 15px; flex-direction: column; gap: 15px; }
+            .contact-bar { border-radius: 15px; padding: 20px; }
         }
     </style>
 </head>
 <body>
 
     <section class="hero">
+        <img src="https://tameemeissa.github.io/personal%20photo.jpg" alt="د. تميم عيسى" class="profile-photo">
+        
         <h2>دكتور تميم عيسى</h2>
         <h1>خبير ومستشار الأمن السيبراني</h1>
         
         <div class="intro-text">
-            خبير يحمل درجة الدكتوراه في أمن الشبكات اللاسلكية[cite: 2, 62]. بخلفية دولية ممتدة عبر ألمانيا، كوريا الجنوبية، وماليزيا[cite: 3, 48, 64]. متخصص في هندسة الحوكمة والامتثال (GRC)، اختبار الاختراق، وحماية البنية التحتية السحابية[cite: 7, 35, 66].
+            [cite_start]خبير يحمل درجة الدكتوراه في أمن الشبكات اللاسلكية[cite: 62, 63]. [cite_start]بخلفية دولية ممتدة عبر ألمانيا، كوريا الجنوبية، وماليزيا[cite: 3, 64, 50]. [cite_start]متخصص في هندسة الحوكمة والامتثال (GRC)، اختبار الاختراق، وحماية البنية التحتية السحابية[cite: 7, 35, 66].
         </div>
 
         <div class="portal-container">
             <a href="https://tameemeissa.github.io/services.html" class="portal-card">
-                <img src="https://cdn-icons-png.flaticon.com/512/2716/2716654.png" alt="Services">
+                <img src="https://cdn-icons-png.flaticon.com/512/2716/2716654.png" alt="Services" class="icon">
                 <h3>الخدمات الاستشارية</h3>
-                <p>حلول شاملة في التدقيق الفني، الحوكمة والامتثال (ISO/NIST)، وإدارة المخاطر الرقمية[cite: 18, 23, 81].</p>
+                [cite_start]<p>حلول شاملة في التدقيق الفني، الحوكمة والامتثال (ISO/NIST)، وإدارة المخاطر الرقمية[cite: 18, 23, 35].</p>
                 <span class="btn">استكشف الخدمات</span>
             </a>
 
             <a href="https://tameemeissa.github.io/training.html" class="portal-card">
-                <img src="https://cdn-icons-png.flaticon.com/512/2438/2438078.png" alt="Training">
+                <img src="https://cdn-icons-png.flaticon.com/512/2438/2438078.png" alt="Training" class="icon">
                 <h3>التدريب الاحترافي</h3>
-                <p>تأهيل الكوادر عبر ورش عمل تخصصية تركز على محاكاة الواقع المهني وبناء الجاهزية التشغيلية[cite: 8, 49, 57].</p>
+                [cite_start]<p>تأهيل الكوادر عبر ورش عمل تخصصية مبنية على خبرات أكاديمية وتدريبية دولية[cite: 8, 49, 57].</p>
                 <span class="btn">عرض الورشات</span>
             </a>
         </div>
 
         <div class="contact-bar">
-            <a href="tel:+01629660207" class="contact-item">
-                📞 <span>01629660207</span> 
+            <a href="https://www.linkedin.com/in/tameem-eissa-a854b030/" class="contact-item" target="_blank">
+                🔗 <span>LinkedIn</span>
             </a>
-            <a href="https://wa.me/491629660207" class="contact-item" target="_blank">
-                💬 <span>واتساب</span>
+            <a href="https://wa.me/00963939433817" class="contact-item" target="_blank">
+                💬 <span>WhatsApp</span>
             </a>
-            <a href="mailto:tamnet83@gmail.com" class="contact-item">
-                📧 <span>tamnet83@gmail.com</span> 
+            <a href="tel:00963939433817" class="contact-item">
+                📞 <span>00963939433817</span>
+            </a>
+            <a href="mailto:dr.tameem.eissa.sy@gmail.com" class="contact-item">
+                📧 <span>Email</span>
             </a>
         </div>
     </section>
 
     <footer>
-        <p>© 2024 د. تميم عيسى - Bielefeld, Germany [cite: 3]</p>
+        <p>© 2025 د. [cite_start]تميم عيسى -   [cite: 1, 3]</p>
     </footer>
 
 </body>
