@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>د. تميم عيسى | خبير ومستشار الأمن السيبراني</title>
+    <style>
+        :root {
+            --primary-navy: #0a192f;
+            --accent-cyan: #64ffda;
+            --text-slate: #8892b0;
+            --white: #e6f1ff;
+            --accent-green: #28a745;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--primary-navy);
+            color: var(--white);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+            background: radial-gradient(circle at center, #112240 0%, #0a192f 100%);
+        }
+
+        .hero h2 {
+            font-size: 1.4rem;
+            color: var(--accent-cyan);
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+
+        .intro-text {
+            max-width: 850px;
+            font-size: 1.1rem;
+            color: var(--text-slate);
+            margin-bottom: 40px;
+        }
+
+        /* Portal Cards */
+        .portal-container {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+
+        .portal-card {
+            background: #112240;
+            border: 1px solid #233554;
+            border-radius: 12px;
+            padding: 35px;
+            width: 320px;
+            text-align: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: var(--white);
+        }
+
+        .portal-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-cyan);
+            box-shadow: 0 10px 30px rgba(2, 12, 27, 0.7);
+        }
+
+        .portal-card img {
+            width: 70px;
+            height: 70px;
+            margin-bottom: 20px;
+        }
+
+        .portal-card h3 {
+            color: var(--accent-cyan);
+            margin-bottom: 15px;
+        }
+
+        /* Contact Bar */
+        .contact-bar {
+            background: rgba(17, 34, 64, 0.8);
+            padding: 20px;
+            border-radius: 50px;
+            border: 1px solid #233554;
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--white);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: 0.3s;
+        }
+
+        .contact-item:hover {
+            color: var(--accent-cyan);
+        }
+
+        .contact-item i {
+            font-size: 1.2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 1px solid var(--accent-cyan);
+            border-radius: 4px;
+            color: var(--accent-cyan);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-top: 15px;
+        }
+
+        footer {
+            padding: 40px;
+            text-align: center;
+            color: var(--text-slate);
+            border-top: 1px solid #233554;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .contact-bar { border-radius: 15px; flex-direction: column; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <h2>دكتور تميم عيسى</h2>
+        <h1>خبير ومستشار الأمن السيبراني</h1>
+        
+        <div class="intro-text">
+            خبير يحمل درجة الدكتوراه في أمن الشبكات اللاسلكية[cite: 2, 62]. بخلفية دولية ممتدة عبر ألمانيا، كوريا الجنوبية، وماليزيا[cite: 3, 48, 64]. متخصص في هندسة الحوكمة والامتثال (GRC)، اختبار الاختراق، وحماية البنية التحتية السحابية[cite: 7, 35, 66].
+        </div>
+
+        <div class="portal-container">
+            <a href="https://tameemeissa.github.io/services.html" class="portal-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/2716/2716654.png" alt="Services">
+                <h3>الخدمات الاستشارية</h3>
+                <p>حلول شاملة في التدقيق الفني، الحوكمة والامتثال (ISO/NIST)، وإدارة المخاطر الرقمية[cite: 18, 23, 81].</p>
+                <span class="btn">استكشف الخدمات</span>
+            </a>
+
+            <a href="https://tameemeissa.github.io/training.html" class="portal-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/2438/2438078.png" alt="Training">
+                <h3>التدريب الاحترافي</h3>
+                <p>تأهيل الكوادر عبر ورش عمل تخصصية تركز على محاكاة الواقع المهني وبناء الجاهزية التشغيلية[cite: 8, 49, 57].</p>
+                <span class="btn">عرض الورشات</span>
+            </a>
+        </div>
+
+        <div class="contact-bar">
+            <a href="tel:+01629660207" class="contact-item">
+                📞 <span>01629660207</span> 
+            </a>
+            <a href="https://wa.me/491629660207" class="contact-item" target="_blank">
+                💬 <span>واتساب</span>
+            </a>
+            <a href="mailto:tamnet83@gmail.com" class="contact-item">
+                📧 <span>tamnet83@gmail.com</span> 
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 د. تميم عيسى - Bielefeld, Germany [cite: 3]</p>
+    </footer>
+
+</body>
+</html>
