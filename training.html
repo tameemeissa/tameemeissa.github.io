@@ -3,276 +3,259 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ورشات تدريبية للتأهيل السيبراني الاحترافي - د. تميم عيسى</title>
+    <title>د. تميم عيسى | التأهيل السيبراني الاحترافي</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f0f2f5;
-            color: #333;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
+        :root {
+            --primary: #0056b3;
+            --secondary: #28a745;
+            --dark: #0f172a;
+            --light-blue: #f0f9ff;
+            --text-main: #334155;
         }
 
-        /* Home Navigation Styles */
-        .top-nav {
-            max-width: 1000px;
-            margin: 15px auto 0;
-            padding: 0 20px;
-            display: flex;
-            justify-content: flex-start;
-        }
-        .home-btn {
-            text-decoration: none;
-            color: #0056b3;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: 0.3s;
-            background: white;
-            padding: 8px 16px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        .home-btn:hover {
-            background: #0056b3;
-            color: white;
-            transform: translateX(-5px);
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f8fafc;
+            color: var(--text-main);
+            line-height: 1.8;
+            margin: 0;
         }
 
         .container {
             max-width: 1000px;
-            margin: 20px auto 40px;
+            margin: 0 auto;
             padding: 20px;
-            background-color: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
         }
-        .hero-image {
-            width: 100%;
-            height: 250px;
-            background: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1000&q=80') center/cover;
-            border-radius: 12px 12px 0 0;
-            margin-bottom: 30px;
-            display: flex;
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 0.9rem;
+            display: inline-flex;
             align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-        .hero-overlay {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 86, 179, 0.7);
-            border-radius: 12px 12px 0 0;
-        }
-        header {
-            position: relative;
-            text-align: center;
-            padding: 20px;
-            color: white;
-            z-index: 1;
-        }
-        header h1 { font-size: 2.3em; margin: 0; }
-        header h2 { font-size: 1.3em; margin-top: 10px; opacity: 0.9; font-weight: normal;}
-        
-        .philosophy-box {
-            background-color: #f0f9ff;
-            padding: 25px;
-            border-radius: 8px;
-            border-right: 6px solid #0056b3;
-            margin-bottom: 30px;
-        }
-
-        h2.section-title {
-            color: #0056b3;
-            border-bottom: 3px solid #28a745;
-            padding-bottom: 10px;
-            margin-top: 40px;
-        }
-
-        .track-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-        .track-card {
-            border: 1px solid #eee;
-            padding: 20px;
-            border-radius: 10px;
-            background-color: #fff;
-            text-align: center;
-            transition: 0.3s;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .track-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
-        .track-card img { width: 60px; height: 60px; margin-bottom: 15px; }
-        .track-card h3 { color: #28a745; font-size: 1.2em; margin-bottom: 15px; border-bottom: 1px solid #eee; width: 100%; padding-bottom: 10px;}
-
-        .team-section {
-            display: flex;
-            gap: 20px;
-            margin: 40px 0;
-            text-align: center;
-        }
-        .team-box { flex: 1; padding: 25px; border-radius: 10px; color: white; }
-        .red-team { background-color: #c0392b; }
-        .blue-team { background-color: #2980b9; }
-        .team-box h4 { margin: 10px 0; font-size: 1.4em; }
-
-        .service-table {
-            width: 100%;
-            border-collapse: collapse;
+            gap: 5px;
             margin: 20px 0;
         }
-        .service-table th { background-color: #0056b3; color: white; padding: 15px; text-align: right; }
-        .service-table td { padding: 15px; border: 1px solid #ddd; text-align: right; }
 
-        .call-to-action {
-            text-align: center;
-            padding: 40px;
-            background-color: #28a745;
+        .hero-card {
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), 
+                        url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1000&q=80');
+            background-size: cover;
+            background-position: center;
             color: white;
-            border-radius: 12px;
-            margin-top: 40px;
+            padding: 60px 40px;
+            border-radius: 20px;
+            text-align: right;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
-        .call-to-action a {
-            display: inline-block;
-            background-color: white;
-            color: #28a745;
-            padding: 15px 35px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.2em;
-            font-weight: bold;
-            margin-top: 20px;
+
+        .hero-card h1 { font-size: 2.2rem; margin: 0; color: #64ffda; }
+        .hero-card p { font-size: 1.2rem; opacity: 0.9; margin-top: 10px; }
+
+        .philosophy-section {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            border-right: 6px solid var(--primary);
+            margin: 40px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
+
+        .section-header {
+            font-size: 1.6rem;
+            color: var(--dark);
+            margin: 50px 0 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .section-header::after { content: ""; height: 1px; background: #e2e8f0; flex: 1; }
+
+        .workshop-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .workshop-card {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+            transition: 0.3s ease;
+            position: relative;
+        }
+        .workshop-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary);
+            box-shadow: 0 12px 24px rgba(0, 86, 179, 0.08);
+        }
+
+        .workshop-card h3 { color: var(--primary); margin: 15px 0; font-size: 1.25rem; }
+        .workshop-card img { width: 45px; opacity: 0.8; }
+
+        .team-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .team-box {
+            padding: 30px;
+            border-radius: 15px;
+            color: white;
             transition: 0.3s;
         }
-        .call-to-action a:hover { opacity: 0.9; transform: scale(1.05); }
+        .red-team { background: #be123c; }
+        .blue-team { background: #1d4ed8; }
+        .team-box:hover { opacity: 0.95; transform: scale(1.02); }
 
-        .footer-nav {
-            text-align: center;
-            margin-top: 20px;
-            padding-bottom: 20px;
+        .table-wrapper {
+            overflow-x: auto;
+            background: white;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
         }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th { background: #f8fafc; color: var(--dark); padding: 15px; text-align: right; border-bottom: 2px solid #e2e8f0; }
+        td { padding: 15px; border-bottom: 1px solid #f1f5f9; }
 
-        .contact-info {
+        /* FAQ */
+        .faq-box { margin-top: 40px; }
+        details { background: white; margin-bottom: 10px; border-radius: 10px; border: 1px solid #e2e8f0; }
+        summary { padding: 15px 20px; cursor: pointer; font-weight: 600; outline: none; }
+        .faq-content { padding: 0 20px 20px; font-size: 0.95rem; color: #64748b; }
+
+        .cta-box {
             text-align: center;
-            margin-top: 30px;
-            padding: 20px;
-            color: #555;
-            border-top: 1px solid #eee;
+            background: var(--dark);
+            color: white;
+            padding: 60px 20px;
+            border-radius: 20px;
+            margin-top: 60px;
         }
-        .contact-info a { color: #0056b3; text-decoration: none; font-weight: bold; }
-        
+        .cta-btn {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            margin-top: 25px;
+            transition: 0.3s;
+        }
+        .cta-btn:hover { background: #15803d; transform: translateY(-2px); }
+
         @media (max-width: 768px) {
-            .team-section { flex-direction: column; }
+            .team-container { grid-template-columns: 1fr; }
+            .hero-card { padding: 40px 20px; text-align: center; }
         }
     </style>
 </head>
 <body>
 
-    <nav class="top-nav">
-        <a href="https://tameemeissa.github.io/" class="home-btn">
-            🏠 العودة للرئيسية
-        </a>
-    </nav>
+<div class="container">
+    <a href="https://tameemeissa.github.io/" class="nav-link">🏠 العودة إلى الرئيسية</a>
 
-    <div class="container">
-        <div class="hero-image">
-            <div class="hero-overlay"></div>
-            <header>
-                <h1>ورشات تدريبية للتأهيل السيبراني الاحترافي</h1>
-                <h2>د. تميم عيسى - خبير ومستشار الأمن السيبراني</h2>
-            </header>
+    <div class="hero-card">
+        <h1>التأهيل السيبراني الاحترافي</h1>
+        <p>ورشات عمل تخصصية لنقل المعرفة من النظرية إلى التطبيق الميداني</p>
+        <p style="font-size: 1.1rem; color: #94a3b8;">إشراف د. تميم عيسى</p>
+    </div>
+
+    <div class="philosophy-section">
+        <h3 style="margin-top:0; color: var(--primary);">المنهجية التدريبية</h3>
+        <p>لا نكتفي بتقديم المعلومات؛ نحن نبني مهارات دفاعية عملية. تعتمد الورشات على محاكاة التهديدات الحقيقية، والالتزام بمعايير <strong>NIST</strong> و <strong>ISO 27001</strong>، لضمان جاهزية الكوادر للتعامل مع الحوادث فور حدوثها.</p>
+    </div>
+
+    <h2 class="section-header">المسارات التدريبية</h2>
+    <div class="workshop-grid">
+        <div class="workshop-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/2092/2092663.png" alt="">
+            <h3>أساسيات السيادة الرقمية</h3>
+            <p>إتقان التعامل مع بيئات Linux/Windows وفهم بروتوكولات الشبكات، وهو الحجر الأساس لأي تخصص سيبراني لاحق.</p>
         </div>
-
-        <div class="philosophy-box">
-            <h3>🛡️ فلسفتي التعليمية: من العلم الأكاديمي إلى الممارسة الاحترافية</h3>
-            <p>أنا لا أقدم مجرد دروس نظرية، بل أعمل على بناء منظومة دفاعية بشرية داخل مؤسستك. برنامجي مصمم لتمكين الكوادر من خلال:</p>
-            <ul>
-                <li><strong>تدريبات عملية:</strong> التركيز على محاكاة الواقع المهني بعيداً عن السرد النظري.</li>
-                <li><strong>أطر عالمية:</strong> الاعتماد على معايير (NIST) و (ISO 27001) لضمان جودة الأداء عالمياً.</li>
-                <li><strong>جاهزية تشغيلية:</strong> إعداد الكوادر لشغل مناصب حيوية مثل محللي أمن ومهندسي دفاع ومستشاري مخاطر.</li>
-            </ul>
+        <div class="workshop-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="">
+            <h3>الحوكمة وإدارة الامتثال (GRC)</h3>
+            <p>تأهيل الكوادر الإدارية والتقنية لتطبيق معايير الآيزو، وتقييم المخاطر، وتحويل التشريعات إلى إجراءات عمل أمنية.</p>
         </div>
-
-        <h2 class="section-title">🚀 الورشات التدريبية المتاحة</h2>
-        <div class="track-grid">
-            <div class="track-card">
-                <img src="https://cdn-icons-png.flaticon.com/512/2092/2092663.png" alt="Icon">
-                <h3>I. مقدمة إلى الأمن السيبراني</h3>
-                <p>بناء إتقان راسخ في أنظمة التشغيل (Linux/Windows) والشبكات ومنهجيات الهجوم/الدفاع الأساسية، وهو أساس إلزامي لدخول جميع المسارات المتخصصة.</p>
-            </div>
-            
-            <div class="track-card">
-                <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Icon">
-                <h3>IV. الحوكمة والامتثال (GRC)</h3>
-                <p>تأهيل الموظفين لإدارة المخاطر المؤسساتية وضمان مطابقة معايير الآيزو (ISO) وتحويل المتطلبات القانونية إلى سياسات ناجحة.</p>
-            </div>
-
-            <div class="track-card">
-                <img src="https://cdn-icons-png.flaticon.com/512/2438/2438078.png" alt="Icon">
-                <h3>V. هندسة الأمن الاستباقي</h3>
-                <p>كيفية بناء وتصميم بنية تحتية منيعة، وتأمين الأنظمة السحابية والحديثة لضمان استمرارية الأعمال تحت أي ظرف.</p>
-            </div>
+        <div class="workshop-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/2438/2438078.png" alt="">
+            <h3>تصميم البنى التحتية المنيعة</h3>
+            <p>هندسة الأنظمة الاستباقية وتأمين البيئات السحابية لضمان استمرار العمليات حتى في ظروف الاختراق العالية.</p>
         </div>
+    </div>
 
-        <div class="team-section">
-            <div class="team-box red-team">
-                <img src="https://cdn-icons-png.flaticon.com/512/9440/9440835.png" style="width: 50px; filter: brightness(0) invert(1);" alt="Red Team">
-                <h4>II. الفريق الأحمر</h4>
-                <p><strong>اختبار القدرة الدفاعية (الهجومي):</strong> تعلم كيفية تفكير المهاجمين لاكتشاف الثغرات في الأنظمة قبل استغلالها من قبل أطراف خارجية.</p>
-            </div>
-            <div class="team-box blue-team">
-                <img src="https://cdn-icons-png.flaticon.com/512/3557/3557620.png" style="width: 50px; filter: brightness(0) invert(1);" alt="Blue Team">
-                <h4>III. الفريق الأزرق</h4>
-                <p><strong>الدفاع والعمليات السيبرانية:</strong> التركيز على مراقبة الأنظمة، وتحليل التنبيهات، والاستجابة السريعة والفعالة للحوادث الأمنية المفاجئة.</p>
-            </div>
+    <div class="team-container">
+        <div class="team-box red-team">
+            <h4 style="margin:0 0 10px;">الفريق الأحمر (الهجومي)</h4>
+            <p style="font-size: 0.95rem;">محاكاة عقلية المهاجم لاكتشاف الثغرات وتجربة اختراق الأنظمة قبل أن يصل إليها المخربون.</p>
         </div>
+        <div class="team-box blue-team">
+            <h4 style="margin:0 0 10px;">الفريق الأزرق (الدفاعي)</h4>
+            <p style="font-size: 0.95rem;">التركيز على الرصد المستمر، تحليل التنبيهات، والاستجابة الفورية للحوادث الأمنية لتقليل الأضرار.</p>
+        </div>
+    </div>
 
-        <h2 class="section-title">💎 لماذا تختار هذه الورشات لتدريب موظفيك؟</h2>
-        <table class="service-table">
+    <h2 class="section-header">لماذا نعتمد هذه الورشات؟</h2>
+    <div class="table-wrapper">
+        <table>
             <thead>
                 <tr>
-                    <th>الميزة المؤسساتية</th>
-                    <th>القيمة المضافة لجهتكم</th>
+                    <th>الميزة</th>
+                    <th>الأثر المؤسساتي</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td><strong>تعلم قائم على التحدي</strong></td>
-                    <td>المتدرب يواجه مشكلات حقيقية ويقوم بحلها، مما يرسخ المهارة بشكل دائم.</td>
+                    <td>اكتساب خبرة ميدانية عبر حل مشكلات حقيقية وليست افتراضية فقط.</td>
                 </tr>
                 <tr>
-                    <td><strong>امتثال للمعايير الدولية</strong></td>
-                    <td>يتم إعداد الكوادر بناءً على معايير NIST و ISO، مما يرفع من تصنيف مؤسستكم الأمني.</td>
+                    <td><strong>معايير دولية</strong></td>
+                    <td>مواءمة مهارات الفريق مع متطلبات NIST، مما يرفع موثوقية المؤسسة.</td>
                 </tr>
             </tbody>
         </table>
+    </div>
 
-        <div class="call-to-action">
-            <h2>ابدأ بتطوير فريقك الآن</h2>
-            <p>أقوم بتصميم وتخصيص الورشات بما يتناسب مع احتياجات مؤسستكم الفنية والإدارية.</p>
-            <a href="https://wa.me/963939433817" target="_blank">طلب مناقشة الخطة التدريبية لمؤسستك</a>
-        </div>
+    <h2 class="section-header">الأسئلة الشائعة</h2>
+    <div class="faq-box">
+        <details>
+            <summary>هل الورشات موجهة للأفراد أم للشركات؟</summary>
+            <div class="faq-content">الورشات مصممة لتناسب الطرفين، حيث نركز في تدريبات الشركات على تخصيص المحتوى بناءً على البنية التحتية الخاصة بهم.</div>
+        </details>
+        <details>
+            <summary>هل يحصل المتدرب على شهادة؟</summary>
+            <div class="faq-content">نعم، يحصل المتدربون على شهادة إتمام توثق المهارات العملية التي تم إتقانها خلال الورشة.</div>
+        </details>
+        <details>
+            <summary>هل تتطلب الورشات معرفة مسبقة بالبرمجة؟</summary>
+            <div class="faq-content">تختلف المتطلبات حسب المسار؛ مسار الأساسيات يبدأ معك من الصفر، بينما تتطلب المسارات المتقدمة معرفة بأساسيات الشبكات والأنظمة.</div>
+        </details>
+    </div>
 
-        <div class="contact-info">
-            للتواصل المباشر مع د. تميم عيسى: <br>
-            📞 هاتف: <a href="tel:+00963939433817">00963939433817</a> | 
-            💬 واتساب: <a href="https://wa.me/963939433817" target="_blank">بدء محادثة</a> |
-            📧 بريد: <a href="mailto:dr.tameem.eissa.sy@gmail.com">dr.tameem.eissa.sy@gmail.com</a>
-        </div>
-
-        <div class="footer-nav">
-             <a href="https://tameemeissa.github.io/" class="home-btn" style="display:inline-flex; border: 1px solid #ddd;">
-                🏠 العودة إلى الصفحة الرئيسية
-            </a>
+    <div class="cta-box">
+        <h2>استثمر في فريقك التقني</h2>
+        <p>نقوم بتصميم خطط تدريبية مخصصة تلبي الأهداف الاستراتيجية لمؤسستك.</p>
+        <a href="https://wa.me/963939433817" class="cta-btn">مناقشة الخطة التدريبية</a>
+        
+        <div style="margin-top: 40px; font-size: 0.9rem; opacity: 0.7;">
+            <span>📞 00963939433817</span> | <span>📧 dr.tameem.eissa.sy@gmail.com</span>
         </div>
     </div>
+
+    <p style="text-align: center; margin-top: 30px;">
+        <a href="https://tameemeissa.github.io/" class="nav-link">🏠 العودة للموقع الرئيسي</a>
+    </p>
+</div>
+
 </body>
-</html> 
+</html>
